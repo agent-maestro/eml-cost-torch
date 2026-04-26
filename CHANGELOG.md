@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [0.4.0] — 2026-04-26 — `diagnose()` predictive risk profile
 
+### Empirical basis (replicated 2026-04-26 with ViT-B/16 added)
+
+  - **n=387 layers across 3 transformers** (GPT-2 small + BERT-base + ViT-B/16),
+    **36 PNE samples** (was 24 in initial E-183 run; replicated cleanly).
+  - **fp16_drift**: BH-q = 0.020, r_rb = -0.25, ratio 1.10x.
+  - **activation_variance**: BH-q = 1.5e-3, r_rb = +0.35, ratio 0.33x.
+  - Controls (ResNet-18, EfficientNet-B0) returned all-N/A as expected
+    (0 PNE layers each — ReLU and SiLU are EML-elementary).
+  - Per-architecture activation_variance survives independently:
+    GPT-2 q=8.6e-4, BERT q=2.7e-5, ViT q=2.7e-4.
+  - All 24 → 36 PNE samples remain GELU variants. **GELU is currently
+    the only modern activation classified as Pfaffian-not-EML** in the
+    eml-cost-torch registry (SiLU = x·sigmoid(x) is EML-elementary;
+    Mish, GeGLU likewise EML).
+
 ### Added
 
 - **`eml_cost_torch.diagnose(model)`** — empirically-grounded per-layer

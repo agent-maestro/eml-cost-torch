@@ -3,17 +3,19 @@
 Given a model, returns a per-layer diagnostic report with empirically-grounded
 risk predictions based on the layer's Pfaffian classification.
 
-Empirical basis (E-183, 2026-04-26):
-  - Per-layer measurements on GPT-2 small + BERT-base = 275 layers, 24 PNE.
+Empirical basis (E-183 + expansion, 2026-04-26):
+  - Per-layer measurements on GPT-2 small + BERT-base + ViT-B/16
+    = 387 layers, 36 PNE. ResNet-18 + EfficientNet-B0 ran as controls
+    (0 PNE each, all N/A as expected).
   - Mann-Whitney U + Benjamini-Hochberg FDR.
-  - 2 of 3 hypotheses survive BH-FDR alpha=0.05:
+  - 2 of 3 hypotheses survive BH-FDR alpha=0.05 (replicated with ViT):
 
-    (a) fp16_drift: PNE layers drift ~14-18% MORE than EML layers under
-        fp16 cast (BH-q = 0.022, n_pne=24, n_eml=227). Effect size
-        rank-biserial r = -0.30 pooled.
-    (b) activation_variance: PNE layers have ~50% LESS output variance
-        under input perturbation (BH-q = 2.1e-4, n_pne=24, n_eml=227).
-        Effect size rank-biserial r = +0.49 pooled.
+    (a) fp16_drift: PNE layers drift ~10-18% MORE than EML layers under
+        fp16 cast (BH-q = 0.020, n_pne=36, n_eml=315). Effect size
+        rank-biserial r = -0.25 pooled across 3 transformers.
+    (b) activation_variance: PNE layers have ~67% LESS output variance
+        under input perturbation (BH-q = 1.5e-3, n_pne=36, n_eml=315).
+        Effect size rank-biserial r = +0.35 pooled.
 
 Mechanistic explanation: Pfaffian-not-EML activations (GELU, etc.) saturate
 at the tails of their input distribution, producing bounded outputs with
@@ -35,12 +37,13 @@ import torch.nn as nn
 from .profile import profile_dict
 
 
-# Empirical constants from E-183 (GPT-2 + BERT pooled, n=275).
-# These are the median-ratio observations, not modeled predictions.
-_FP16_DRIFT_RATIO_PNE_OVER_EML = 1.14   # 14% more drift on PNE layers
-_FP16_DRIFT_BH_Q = 0.022
-_ACTVAR_RATIO_PNE_OVER_EML = 0.47       # 53% less variance on PNE layers
-_ACTVAR_BH_Q = 2.1e-4
+# Empirical constants from E-183 + ViT expansion (GPT-2 + BERT + ViT
+# pooled, n=387). These are the median-ratio observations, not modeled
+# predictions.
+_FP16_DRIFT_RATIO_PNE_OVER_EML = 1.10   # 10% more drift on PNE layers (pooled)
+_FP16_DRIFT_BH_Q = 0.020
+_ACTVAR_RATIO_PNE_OVER_EML = 0.33       # 67% less variance on PNE layers (pooled)
+_ACTVAR_BH_Q = 1.5e-3
 
 
 @dataclass
@@ -79,10 +82,11 @@ class DiagnosisReport:
     layers: list[LayerRisk] = field(default_factory=list)
 
     empirical_basis: dict = field(default_factory=lambda: {
-        "study": "E-183 (2026-04-26)",
-        "architectures": ["GPT-2 small", "BERT-base"],
-        "n_layers_pooled": 275,
-        "n_pfaffian_not_eml_pooled": 24,
+        "study": "E-183 + ViT expansion (2026-04-26)",
+        "architectures": ["GPT-2 small", "BERT-base", "ViT-B/16"],
+        "controls": ["ResNet-18", "EfficientNet-B0"],
+        "n_layers_pooled": 387,
+        "n_pfaffian_not_eml_pooled": 36,
         "fp16_drift_q_value": _FP16_DRIFT_BH_Q,
         "fp16_drift_median_ratio_pne_over_eml": _FP16_DRIFT_RATIO_PNE_OVER_EML,
         "activation_variance_q_value": _ACTVAR_BH_Q,
