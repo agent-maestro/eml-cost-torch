@@ -128,6 +128,25 @@ TORCH_LAYER_REGISTRY: dict[str, sp.Basic] = {
     "Flatten": ZERO_FORM,
     "Unflatten": ZERO_FORM,
     "Reshape": ZERO_FORM,
+    # HuggingFace transformers (added 2026-04-26 for GPT-2 / BERT coverage)
+    "Conv1D": LINEAR_FORM,                  # HF's GPT-2 Conv1D = transposed Linear
+    "NewGELUActivation": GELU_FORM,         # HF's GPT-2 GELU
+    "GELUActivation": GELU_FORM,            # HF's standard GELU class
+    "FastGELUActivation": GELU_FORM,        # HF's tanh-approximation GELU
+    "QuickGELUActivation": GELU_FORM,       # HF's CLIP-style GELU (uses sigmoid)
+    "PytorchGELUTanh": GELU_FORM,           # HF's tanh-approximation
+    "ClippedGELUActivation": GELU_FORM,
+    "AccurateGELUActivation": GELU_FORM,
+    "MishActivation": MISH_FORM,
+    "T5LayerNorm": RMSNORM_FORM,            # T5's "LayerNorm" is actually RMSNorm
+    "LlamaRMSNorm": RMSNORM_FORM,           # Llama / Llama2 / Llama3
+    "GemmaRMSNorm": RMSNORM_FORM,           # Gemma
+    "Qwen2RMSNorm": RMSNORM_FORM,           # Qwen2
+    "MistralRMSNorm": RMSNORM_FORM,         # Mistral
+    "RotaryEmbedding": EMBEDDING_FORM,      # rotary positional embedding (table-like)
+    "LlamaRotaryEmbedding": EMBEDDING_FORM,
+    "GemmaRotaryEmbedding": EMBEDDING_FORM,
+    "Qwen2RotaryEmbedding": EMBEDDING_FORM,
 }
 
 

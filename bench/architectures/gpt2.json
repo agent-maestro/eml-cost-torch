@@ -2,35 +2,40 @@
   "name": "gpt2",
   "summary": {
     "n_layers_total": 124,
-    "n_layers_known": 64,
-    "n_layers_unknown": 60,
-    "coverage_pct": 51.6,
+    "n_layers_known": 124,
+    "n_layers_unknown": 0,
+    "coverage_pct": 100.0,
     "pfaffian_r": {
       "min": 0,
-      "max": 1,
-      "mean": 0.39,
+      "max": 3,
+      "mean": 0.49,
       "distribution": {
-        "0": 39,
-        "1": 25
+        "0": 87,
+        "1": 25,
+        "3": 12
       }
     },
     "eml_depth": {
       "min": 0,
-      "max": 4,
-      "mean": 1.56,
+      "max": 5,
+      "mean": 2.06,
       "distribution": {
         "0": 39,
-        "4": 25
+        "4": 25,
+        "2": 48,
+        "5": 12
       }
     },
     "predicted_depth": {
       "min": 0,
-      "max": 4,
-      "mean": 1.56
+      "max": 6,
+      "mean": 2.16
     },
     "axes_distribution": {
+      "p0-d2-w0-c0": 48,
       "p0-d0-w0-c0": 39,
-      "p1-d4-w1-c0": 25
+      "p1-d4-w1-c0": 25,
+      "p3-d5-w3-c0": 12
     },
     "class_distribution": {
       "Conv1D": 48,
@@ -39,11 +44,8 @@
       "NewGELUActivation": 12,
       "Embedding": 2
     },
-    "unknown_class_distribution": {
-      "Conv1D": 48,
-      "NewGELUActivation": 12
-    },
-    "pfaffian_not_eml_count": 0
+    "unknown_class_distribution": {},
+    "pfaffian_not_eml_count": 12
   },
   "rows": [
     {
@@ -93,24 +95,24 @@
     {
       "name": "h.0.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.0.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.0.attn.attn_dropout",
@@ -148,35 +150,35 @@
     {
       "name": "h.0.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.0.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.0.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.0.mlp.dropout",
@@ -203,24 +205,24 @@
     {
       "name": "h.1.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.1.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.1.attn.attn_dropout",
@@ -258,35 +260,35 @@
     {
       "name": "h.1.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.1.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.1.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.1.mlp.dropout",
@@ -313,24 +315,24 @@
     {
       "name": "h.2.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.2.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.2.attn.attn_dropout",
@@ -368,35 +370,35 @@
     {
       "name": "h.2.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.2.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.2.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.2.mlp.dropout",
@@ -423,24 +425,24 @@
     {
       "name": "h.3.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.3.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.3.attn.attn_dropout",
@@ -478,35 +480,35 @@
     {
       "name": "h.3.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.3.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.3.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.3.mlp.dropout",
@@ -533,24 +535,24 @@
     {
       "name": "h.4.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.4.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.4.attn.attn_dropout",
@@ -588,35 +590,35 @@
     {
       "name": "h.4.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.4.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.4.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.4.mlp.dropout",
@@ -643,24 +645,24 @@
     {
       "name": "h.5.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.5.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.5.attn.attn_dropout",
@@ -698,35 +700,35 @@
     {
       "name": "h.5.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.5.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.5.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.5.mlp.dropout",
@@ -753,24 +755,24 @@
     {
       "name": "h.6.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.6.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.6.attn.attn_dropout",
@@ -808,35 +810,35 @@
     {
       "name": "h.6.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.6.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.6.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.6.mlp.dropout",
@@ -863,24 +865,24 @@
     {
       "name": "h.7.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.7.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.7.attn.attn_dropout",
@@ -918,35 +920,35 @@
     {
       "name": "h.7.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.7.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.7.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.7.mlp.dropout",
@@ -973,24 +975,24 @@
     {
       "name": "h.8.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.8.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.8.attn.attn_dropout",
@@ -1028,35 +1030,35 @@
     {
       "name": "h.8.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.8.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.8.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.8.mlp.dropout",
@@ -1083,24 +1085,24 @@
     {
       "name": "h.9.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.9.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.9.attn.attn_dropout",
@@ -1138,35 +1140,35 @@
     {
       "name": "h.9.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.9.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.9.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.9.mlp.dropout",
@@ -1193,24 +1195,24 @@
     {
       "name": "h.10.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.10.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.10.attn.attn_dropout",
@@ -1248,35 +1250,35 @@
     {
       "name": "h.10.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.10.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.10.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.10.mlp.dropout",
@@ -1303,24 +1305,24 @@
     {
       "name": "h.11.attn.c_attn",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.11.attn.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.11.attn.attn_dropout",
@@ -1358,35 +1360,35 @@
     {
       "name": "h.11.mlp.c_fc",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.11.mlp.c_proj",
       "class_name": "Conv1D",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
+      "pfaffian_r": 0,
+      "max_path_r": 0,
+      "eml_depth": 2,
+      "predicted_depth": 2,
       "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "axes": "p0-d2-w0-c0",
+      "is_unknown": false
     },
     {
       "name": "h.11.mlp.act",
       "class_name": "NewGELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "h.11.mlp.dropout",

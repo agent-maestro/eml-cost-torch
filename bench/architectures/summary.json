@@ -8,35 +8,40 @@
   "per_architecture": {
     "gpt2": {
       "n_layers_total": 124,
-      "n_layers_known": 64,
-      "n_layers_unknown": 60,
-      "coverage_pct": 51.6,
+      "n_layers_known": 124,
+      "n_layers_unknown": 0,
+      "coverage_pct": 100.0,
       "pfaffian_r": {
         "min": 0,
-        "max": 1,
-        "mean": 0.39,
+        "max": 3,
+        "mean": 0.49,
         "distribution": {
-          "0": 39,
-          "1": 25
+          "0": 87,
+          "1": 25,
+          "3": 12
         }
       },
       "eml_depth": {
         "min": 0,
-        "max": 4,
-        "mean": 1.56,
+        "max": 5,
+        "mean": 2.06,
         "distribution": {
           "0": 39,
-          "4": 25
+          "4": 25,
+          "2": 48,
+          "5": 12
         }
       },
       "predicted_depth": {
         "min": 0,
-        "max": 4,
-        "mean": 1.56
+        "max": 6,
+        "mean": 2.16
       },
       "axes_distribution": {
+        "p0-d2-w0-c0": 48,
         "p0-d0-w0-c0": 39,
-        "p1-d4-w1-c0": 25
+        "p1-d4-w1-c0": 25,
+        "p3-d5-w3-c0": 12
       },
       "class_distribution": {
         "Conv1D": 48,
@@ -45,46 +50,46 @@
         "NewGELUActivation": 12,
         "Embedding": 2
       },
-      "unknown_class_distribution": {
-        "Conv1D": 48,
-        "NewGELUActivation": 12
-      },
-      "pfaffian_not_eml_count": 0
+      "unknown_class_distribution": {},
+      "pfaffian_not_eml_count": 12
     },
     "bert-base": {
       "n_layers_total": 151,
-      "n_layers_known": 139,
-      "n_layers_unknown": 12,
-      "coverage_pct": 92.1,
+      "n_layers_known": 151,
+      "n_layers_unknown": 0,
+      "coverage_pct": 100.0,
       "pfaffian_r": {
         "min": 0,
-        "max": 1,
-        "mean": 0.19,
+        "max": 3,
+        "mean": 0.41,
         "distribution": {
           "0": 113,
-          "1": 26
+          "1": 26,
+          "3": 12
         }
       },
       "eml_depth": {
         "min": 0,
-        "max": 4,
-        "mean": 1.78,
+        "max": 5,
+        "mean": 2.03,
         "distribution": {
           "0": 40,
           "4": 25,
           "2": 73,
+          "5": 12,
           "1": 1
         }
       },
       "predicted_depth": {
         "min": 0,
-        "max": 4,
-        "mean": 1.78
+        "max": 6,
+        "mean": 2.11
       },
       "axes_distribution": {
         "p0-d2-w0-c0": 73,
         "p0-d0-w0-c0": 40,
         "p1-d4-w1-c0": 25,
+        "p3-d5-w3-c0": 12,
         "p1-d1-w1-c0": 1
       },
       "class_distribution": {
@@ -95,10 +100,8 @@
         "Embedding": 3,
         "Tanh": 1
       },
-      "unknown_class_distribution": {
-        "GELUActivation": 12
-      },
-      "pfaffian_not_eml_count": 0
+      "unknown_class_distribution": {},
+      "pfaffian_not_eml_count": 12
     },
     "resnet-50": {
       "n_layers_total": 126,
@@ -200,13 +203,14 @@
     {
       "name": "gpt2",
       "n_layers": 124,
-      "coverage_pct": 51.6,
-      "pfaffian_r_max": 1,
-      "eml_depth_max": 4,
-      "predicted_depth_max": 4,
-      "pfaffian_not_eml_count": 0,
-      "n_axes_classes": 2,
+      "coverage_pct": 100.0,
+      "pfaffian_r_max": 3,
+      "eml_depth_max": 5,
+      "predicted_depth_max": 6,
+      "pfaffian_not_eml_count": 12,
+      "n_axes_classes": 4,
       "top_axes": [
+        "p0-d2-w0-c0",
         "p0-d0-w0-c0",
         "p1-d4-w1-c0"
       ]
@@ -214,12 +218,12 @@
     {
       "name": "bert-base",
       "n_layers": 151,
-      "coverage_pct": 92.1,
-      "pfaffian_r_max": 1,
-      "eml_depth_max": 4,
-      "predicted_depth_max": 4,
-      "pfaffian_not_eml_count": 0,
-      "n_axes_classes": 4,
+      "coverage_pct": 100.0,
+      "pfaffian_r_max": 3,
+      "eml_depth_max": 5,
+      "predicted_depth_max": 6,
+      "pfaffian_not_eml_count": 12,
+      "n_axes_classes": 5,
       "top_axes": [
         "p0-d2-w0-c0",
         "p0-d0-w0-c0",

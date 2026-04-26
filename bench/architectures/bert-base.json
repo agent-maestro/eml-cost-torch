@@ -2,38 +2,41 @@
   "name": "bert-base",
   "summary": {
     "n_layers_total": 151,
-    "n_layers_known": 139,
-    "n_layers_unknown": 12,
-    "coverage_pct": 92.1,
+    "n_layers_known": 151,
+    "n_layers_unknown": 0,
+    "coverage_pct": 100.0,
     "pfaffian_r": {
       "min": 0,
-      "max": 1,
-      "mean": 0.19,
+      "max": 3,
+      "mean": 0.41,
       "distribution": {
         "0": 113,
-        "1": 26
+        "1": 26,
+        "3": 12
       }
     },
     "eml_depth": {
       "min": 0,
-      "max": 4,
-      "mean": 1.78,
+      "max": 5,
+      "mean": 2.03,
       "distribution": {
         "0": 40,
         "4": 25,
         "2": 73,
+        "5": 12,
         "1": 1
       }
     },
     "predicted_depth": {
       "min": 0,
-      "max": 4,
-      "mean": 1.78
+      "max": 6,
+      "mean": 2.11
     },
     "axes_distribution": {
       "p0-d2-w0-c0": 73,
       "p0-d0-w0-c0": 40,
       "p1-d4-w1-c0": 25,
+      "p3-d5-w3-c0": 12,
       "p1-d1-w1-c0": 1
     },
     "class_distribution": {
@@ -44,10 +47,8 @@
       "Embedding": 3,
       "Tanh": 1
     },
-    "unknown_class_distribution": {
-      "GELUActivation": 12
-    },
-    "pfaffian_not_eml_count": 0
+    "unknown_class_distribution": {},
+    "pfaffian_not_eml_count": 12
   },
   "rows": [
     {
@@ -196,13 +197,13 @@
     {
       "name": "encoder.layer.0.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.0.output.dense",
@@ -328,13 +329,13 @@
     {
       "name": "encoder.layer.1.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.1.output.dense",
@@ -460,13 +461,13 @@
     {
       "name": "encoder.layer.2.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.2.output.dense",
@@ -592,13 +593,13 @@
     {
       "name": "encoder.layer.3.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.3.output.dense",
@@ -724,13 +725,13 @@
     {
       "name": "encoder.layer.4.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.4.output.dense",
@@ -856,13 +857,13 @@
     {
       "name": "encoder.layer.5.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.5.output.dense",
@@ -988,13 +989,13 @@
     {
       "name": "encoder.layer.6.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.6.output.dense",
@@ -1120,13 +1121,13 @@
     {
       "name": "encoder.layer.7.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.7.output.dense",
@@ -1252,13 +1253,13 @@
     {
       "name": "encoder.layer.8.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.8.output.dense",
@@ -1384,13 +1385,13 @@
     {
       "name": "encoder.layer.9.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.9.output.dense",
@@ -1516,13 +1517,13 @@
     {
       "name": "encoder.layer.10.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.10.output.dense",
@@ -1648,13 +1649,13 @@
     {
       "name": "encoder.layer.11.intermediate.intermediate_act_fn",
       "class_name": "GELUActivation",
-      "pfaffian_r": -1,
-      "max_path_r": -1,
-      "eml_depth": -1,
-      "predicted_depth": -1,
-      "is_pfaffian_not_eml": false,
-      "axes": "p?-d?-w?-c?",
-      "is_unknown": true
+      "pfaffian_r": 3,
+      "max_path_r": 3,
+      "eml_depth": 5,
+      "predicted_depth": 6,
+      "is_pfaffian_not_eml": true,
+      "axes": "p3-d5-w3-c0",
+      "is_unknown": false
     },
     {
       "name": "encoder.layer.11.output.dense",
