@@ -56,6 +56,8 @@ TORCH_LAYER_REGISTRY: dict[str, sp.Basic] = {
     # Linear family
     "Linear": LINEAR_FORM,
     "Bilinear": LINEAR_FORM,
+    "LazyLinear": LINEAR_FORM,
+    "NonDynamicallyQuantizableLinear": LINEAR_FORM,  # used inside MultiheadAttention
     # Convolutions
     "Conv1d": LINEAR_FORM,
     "Conv2d": LINEAR_FORM,
