@@ -81,7 +81,7 @@ leaf via the registry, output per-layer Pfaffian profile.
 ## Reproducibility
 
 ```
-git clone https://github.com/almaguer1986/eml-cost-torch
+git clone https://github.com/agent-maestro/eml-cost-torch
 cd eml-cost-torch
 pip install -e . torch transformers torchvision matplotlib
 python bench/architectures/profile_architectures.py

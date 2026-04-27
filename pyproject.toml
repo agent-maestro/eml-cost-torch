@@ -51,8 +51,8 @@ dev = [
 
 [project.urls]
 Homepage = "https://monogate.org"
-Repository = "https://github.com/almaguer1986/eml-cost-torch"
-Issues = "https://github.com/almaguer1986/eml-cost-torch/issues"
+Repository = "https://github.com/agent-maestro/eml-cost-torch"
+Issues = "https://github.com/agent-maestro/eml-cost-torch/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
